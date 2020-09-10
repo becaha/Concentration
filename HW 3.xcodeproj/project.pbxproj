@@ -21,6 +21,8 @@
 		DB02F3BB2507F9D0006A7129 /* EmojiConcentrationGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB02F3B92507F9D0006A7129 /* EmojiConcentrationGame.swift */; };
 		DB02F3C8250A6F6C006A7129 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB02F3C7250A6F6C006A7129 /* CardView.swift */; };
 		DB02F3C9250A6F6C006A7129 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB02F3C7250A6F6C006A7129 /* CardView.swift */; };
+		DB02F3CE250A79AE006A7129 /* Array+Index.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB02F3CD250A79AE006A7129 /* Array+Index.swift */; };
+		DB02F3CF250A79AE006A7129 /* Array+Index.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB02F3CD250A79AE006A7129 /* Array+Index.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,7 @@
 		DB02F3B62507F95E006A7129 /* ConcentrationGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcentrationGame.swift; sourceTree = "<group>"; };
 		DB02F3B92507F9D0006A7129 /* EmojiConcentrationGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiConcentrationGame.swift; sourceTree = "<group>"; };
 		DB02F3C7250A6F6C006A7129 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		DB02F3CD250A79AE006A7129 /* Array+Index.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Index.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +110,9 @@
 		DB02F3782507F5E2006A7129 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				DB02F3D0250A7A0E006A7129 /* View */,
+				DB02F3CC250A7990006A7129 /* Utils */,
 				DB02F3C6250A6F23006A7129 /* Model */,
-				DB02F3C5250A6F1A006A7129 /* View */,
 				DB02F3C4250A6F10006A7129 /* ViewModel */,
 				DB02F3792507F5E2006A7129 /* HW_3App.swift */,
 				DB02F37B2507F5E3006A7129 /* Assets.xcassets */,
@@ -170,21 +174,29 @@
 			name = ViewModel;
 			sourceTree = "<group>";
 		};
-		DB02F3C5250A6F1A006A7129 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				DB02F37A2507F5E2006A7129 /* EmojiConcentrationGameView.swift */,
-				DB02F3C7250A6F6C006A7129 /* CardView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		DB02F3C6250A6F23006A7129 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				DB02F3B62507F95E006A7129 /* ConcentrationGame.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		DB02F3CC250A7990006A7129 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DB02F3CD250A79AE006A7129 /* Array+Index.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		DB02F3D0250A7A0E006A7129 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DB02F37A2507F5E2006A7129 /* EmojiConcentrationGameView.swift */,
+				DB02F3C7250A6F6C006A7129 /* CardView.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,6 +360,7 @@
 				DB02F3B72507F95E006A7129 /* ConcentrationGame.swift in Sources */,
 				DB02F3A42507F5E3006A7129 /* EmojiConcentrationGameView.swift in Sources */,
 				DB02F3A22507F5E3006A7129 /* HW_3App.swift in Sources */,
+				DB02F3CE250A79AE006A7129 /* Array+Index.swift in Sources */,
 				DB02F3C8250A6F6C006A7129 /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,6 +373,7 @@
 				DB02F3B82507F95E006A7129 /* ConcentrationGame.swift in Sources */,
 				DB02F3A52507F5E3006A7129 /* EmojiConcentrationGameView.swift in Sources */,
 				DB02F3A32507F5E3006A7129 /* HW_3App.swift in Sources */,
+				DB02F3CF250A79AE006A7129 /* Array+Index.swift in Sources */,
 				DB02F3C9250A6F6C006A7129 /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

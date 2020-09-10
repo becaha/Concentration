@@ -35,17 +35,8 @@ struct ConcentrationGame<CardContent> {
     
     mutating func choose(_ card: Card) {
         print("You chose \(card)")
-        if let cardIndex = index(of: card) {
+        if let cardIndex = cards.index(of: card) {
             cards[cardIndex].isFaceUp.toggle()
         }
-    }
-    
-    func index(of card: Card) -> Int? {
-        for index in 0..<cards.count {
-            if cards[index].id == card.id {
-                return index
-            }
-        }
-        return nil
     }
 }
