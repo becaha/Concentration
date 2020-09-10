@@ -11,14 +11,16 @@
 		DB02F3A02507F5E3006A7129 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB02F39F2507F5E3006A7129 /* Tests_macOS.swift */; };
 		DB02F3A22507F5E3006A7129 /* HW_3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB02F3792507F5E2006A7129 /* HW_3App.swift */; };
 		DB02F3A32507F5E3006A7129 /* HW_3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB02F3792507F5E2006A7129 /* HW_3App.swift */; };
-		DB02F3A42507F5E3006A7129 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB02F37A2507F5E2006A7129 /* ContentView.swift */; };
-		DB02F3A52507F5E3006A7129 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB02F37A2507F5E2006A7129 /* ContentView.swift */; };
+		DB02F3A42507F5E3006A7129 /* EmojiConcentrationGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB02F37A2507F5E2006A7129 /* EmojiConcentrationGameView.swift */; };
+		DB02F3A52507F5E3006A7129 /* EmojiConcentrationGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB02F37A2507F5E2006A7129 /* EmojiConcentrationGameView.swift */; };
 		DB02F3A62507F5E3006A7129 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB02F37B2507F5E3006A7129 /* Assets.xcassets */; };
 		DB02F3A72507F5E3006A7129 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB02F37B2507F5E3006A7129 /* Assets.xcassets */; };
 		DB02F3B72507F95E006A7129 /* ConcentrationGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB02F3B62507F95E006A7129 /* ConcentrationGame.swift */; };
 		DB02F3B82507F95E006A7129 /* ConcentrationGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB02F3B62507F95E006A7129 /* ConcentrationGame.swift */; };
 		DB02F3BA2507F9D0006A7129 /* EmojiConcentrationGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB02F3B92507F9D0006A7129 /* EmojiConcentrationGame.swift */; };
 		DB02F3BB2507F9D0006A7129 /* EmojiConcentrationGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB02F3B92507F9D0006A7129 /* EmojiConcentrationGame.swift */; };
+		DB02F3C8250A6F6C006A7129 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB02F3C7250A6F6C006A7129 /* CardView.swift */; };
+		DB02F3C9250A6F6C006A7129 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB02F3C7250A6F6C006A7129 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +42,7 @@
 
 /* Begin PBXFileReference section */
 		DB02F3792507F5E2006A7129 /* HW_3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HW_3App.swift; sourceTree = "<group>"; };
-		DB02F37A2507F5E2006A7129 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DB02F37A2507F5E2006A7129 /* EmojiConcentrationGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiConcentrationGameView.swift; sourceTree = "<group>"; };
 		DB02F37B2507F5E3006A7129 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB02F3802507F5E3006A7129 /* HW 3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HW 3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB02F3832507F5E3006A7129 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 		DB02F3A12507F5E3006A7129 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB02F3B62507F95E006A7129 /* ConcentrationGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcentrationGame.swift; sourceTree = "<group>"; };
 		DB02F3B92507F9D0006A7129 /* EmojiConcentrationGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiConcentrationGame.swift; sourceTree = "<group>"; };
+		DB02F3C7250A6F6C006A7129 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,11 +107,11 @@
 		DB02F3782507F5E2006A7129 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				DB02F3C6250A6F23006A7129 /* Model */,
+				DB02F3C5250A6F1A006A7129 /* View */,
+				DB02F3C4250A6F10006A7129 /* ViewModel */,
 				DB02F3792507F5E2006A7129 /* HW_3App.swift */,
-				DB02F37A2507F5E2006A7129 /* ContentView.swift */,
 				DB02F37B2507F5E3006A7129 /* Assets.xcassets */,
-				DB02F3B62507F95E006A7129 /* ConcentrationGame.swift */,
-				DB02F3B92507F9D0006A7129 /* EmojiConcentrationGame.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -157,6 +160,31 @@
 				DB02F3A12507F5E3006A7129 /* Info.plist */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		DB02F3C4250A6F10006A7129 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DB02F3B92507F9D0006A7129 /* EmojiConcentrationGame.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		DB02F3C5250A6F1A006A7129 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DB02F37A2507F5E2006A7129 /* EmojiConcentrationGameView.swift */,
+				DB02F3C7250A6F6C006A7129 /* CardView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DB02F3C6250A6F23006A7129 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DB02F3B62507F95E006A7129 /* ConcentrationGame.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,8 +346,9 @@
 			files = (
 				DB02F3BA2507F9D0006A7129 /* EmojiConcentrationGame.swift in Sources */,
 				DB02F3B72507F95E006A7129 /* ConcentrationGame.swift in Sources */,
-				DB02F3A42507F5E3006A7129 /* ContentView.swift in Sources */,
+				DB02F3A42507F5E3006A7129 /* EmojiConcentrationGameView.swift in Sources */,
 				DB02F3A22507F5E3006A7129 /* HW_3App.swift in Sources */,
+				DB02F3C8250A6F6C006A7129 /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,8 +358,9 @@
 			files = (
 				DB02F3BB2507F9D0006A7129 /* EmojiConcentrationGame.swift in Sources */,
 				DB02F3B82507F95E006A7129 /* ConcentrationGame.swift in Sources */,
-				DB02F3A52507F5E3006A7129 /* ContentView.swift in Sources */,
+				DB02F3A52507F5E3006A7129 /* EmojiConcentrationGameView.swift in Sources */,
 				DB02F3A32507F5E3006A7129 /* HW_3App.swift in Sources */,
+				DB02F3C9250A6F6C006A7129 /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
