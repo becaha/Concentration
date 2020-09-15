@@ -46,9 +46,9 @@
 		DB02F3792507F5E2006A7129 /* HW_3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HW_3App.swift; sourceTree = "<group>"; };
 		DB02F37A2507F5E2006A7129 /* EmojiConcentrationGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiConcentrationGameView.swift; sourceTree = "<group>"; };
 		DB02F37B2507F5E3006A7129 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DB02F3802507F5E3006A7129 /* HW 3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HW 3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB02F3802507F5E3006A7129 /* HW 3 Concentration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HW 3 Concentration.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB02F3832507F5E3006A7129 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DB02F3882507F5E3006A7129 /* HW 3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HW 3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB02F3882507F5E3006A7129 /* HW 3 Concentration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HW 3 Concentration.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB02F38A2507F5E3006A7129 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB02F38B2507F5E3006A7129 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		DB02F3902507F5E3006A7129 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,8 +123,8 @@
 		DB02F3812507F5E3006A7129 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DB02F3802507F5E3006A7129 /* HW 3.app */,
-				DB02F3882507F5E3006A7129 /* HW 3.app */,
+				DB02F3802507F5E3006A7129 /* HW 3 Concentration.app */,
+				DB02F3882507F5E3006A7129 /* HW 3 Concentration.app */,
 				DB02F3902507F5E3006A7129 /* Tests iOS.xctest */,
 				DB02F39B2507F5E3006A7129 /* Tests macOS.xctest */,
 			);
@@ -202,9 +202,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DB02F37F2507F5E3006A7129 /* HW 3 (iOS) */ = {
+		DB02F37F2507F5E3006A7129 /* HW 3 Concentration (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DB02F3AA2507F5E3006A7129 /* Build configuration list for PBXNativeTarget "HW 3 (iOS)" */;
+			buildConfigurationList = DB02F3AA2507F5E3006A7129 /* Build configuration list for PBXNativeTarget "HW 3 Concentration (iOS)" */;
 			buildPhases = (
 				DB02F37C2507F5E3006A7129 /* Sources */,
 				DB02F37D2507F5E3006A7129 /* Frameworks */,
@@ -214,14 +214,14 @@
 			);
 			dependencies = (
 			);
-			name = "HW 3 (iOS)";
+			name = "HW 3 Concentration (iOS)";
 			productName = "HW 3 (iOS)";
-			productReference = DB02F3802507F5E3006A7129 /* HW 3.app */;
+			productReference = DB02F3802507F5E3006A7129 /* HW 3 Concentration.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DB02F3872507F5E3006A7129 /* HW 3 (macOS) */ = {
+		DB02F3872507F5E3006A7129 /* HW 3 Concentration (macOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DB02F3AD2507F5E3006A7129 /* Build configuration list for PBXNativeTarget "HW 3 (macOS)" */;
+			buildConfigurationList = DB02F3AD2507F5E3006A7129 /* Build configuration list for PBXNativeTarget "HW 3 Concentration (macOS)" */;
 			buildPhases = (
 				DB02F3842507F5E3006A7129 /* Sources */,
 				DB02F3852507F5E3006A7129 /* Frameworks */,
@@ -231,9 +231,9 @@
 			);
 			dependencies = (
 			);
-			name = "HW 3 (macOS)";
+			name = "HW 3 Concentration (macOS)";
 			productName = "HW 3 (macOS)";
-			productReference = DB02F3882507F5E3006A7129 /* HW 3.app */;
+			productReference = DB02F3882507F5E3006A7129 /* HW 3 Concentration.app */;
 			productType = "com.apple.product-type.application";
 		};
 		DB02F38F2507F5E3006A7129 /* Tests iOS */ = {
@@ -297,7 +297,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DB02F3772507F5E2006A7129 /* Build configuration list for PBXProject "HW 3" */;
+			buildConfigurationList = DB02F3772507F5E2006A7129 /* Build configuration list for PBXProject "HW 3 Concentration" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -310,8 +310,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DB02F37F2507F5E3006A7129 /* HW 3 (iOS) */,
-				DB02F3872507F5E3006A7129 /* HW 3 (macOS) */,
+				DB02F37F2507F5E3006A7129 /* HW 3 Concentration (iOS) */,
+				DB02F3872507F5E3006A7129 /* HW 3 Concentration (macOS) */,
 				DB02F38F2507F5E3006A7129 /* Tests iOS */,
 				DB02F39A2507F5E3006A7129 /* Tests macOS */,
 			);
@@ -399,12 +399,12 @@
 /* Begin PBXTargetDependency section */
 		DB02F3922507F5E3006A7129 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DB02F37F2507F5E3006A7129 /* HW 3 (iOS) */;
+			target = DB02F37F2507F5E3006A7129 /* HW 3 Concentration (iOS) */;
 			targetProxy = DB02F3912507F5E3006A7129 /* PBXContainerItemProxy */;
 		};
 		DB02F39D2507F5E3006A7129 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DB02F3872507F5E3006A7129 /* HW 3 (macOS) */;
+			target = DB02F3872507F5E3006A7129 /* HW 3 Concentration (macOS) */;
 			targetProxy = DB02F39C2507F5E3006A7129 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -535,7 +535,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.byu.HW-3";
-				PRODUCT_NAME = "HW 3";
+				PRODUCT_NAME = "HW 3 Concentration";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -556,7 +556,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.byu.HW-3";
-				PRODUCT_NAME = "HW 3";
+				PRODUCT_NAME = "HW 3 Concentration";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -580,7 +580,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.byu.HW-3";
-				PRODUCT_NAME = "HW 3";
+				PRODUCT_NAME = "HW 3 Concentration";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
 			};
@@ -602,7 +602,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.byu.HW-3";
-				PRODUCT_NAME = "HW 3";
+				PRODUCT_NAME = "HW 3 Concentration";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
 			};
@@ -696,7 +696,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DB02F3772507F5E2006A7129 /* Build configuration list for PBXProject "HW 3" */ = {
+		DB02F3772507F5E2006A7129 /* Build configuration list for PBXProject "HW 3 Concentration" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DB02F3A82507F5E3006A7129 /* Debug */,
@@ -705,7 +705,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DB02F3AA2507F5E3006A7129 /* Build configuration list for PBXNativeTarget "HW 3 (iOS)" */ = {
+		DB02F3AA2507F5E3006A7129 /* Build configuration list for PBXNativeTarget "HW 3 Concentration (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DB02F3AB2507F5E3006A7129 /* Debug */,
@@ -714,7 +714,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DB02F3AD2507F5E3006A7129 /* Build configuration list for PBXNativeTarget "HW 3 (macOS)" */ = {
+		DB02F3AD2507F5E3006A7129 /* Build configuration list for PBXNativeTarget "HW 3 Concentration (macOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DB02F3AE2507F5E3006A7129 /* Debug */,

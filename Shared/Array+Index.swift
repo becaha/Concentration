@@ -8,7 +8,7 @@
 import Foundation
 
 extension Array where Element: Identifiable {
-    func index(of element: Element) -> Int? {
+    func firstIndex(matching element: Element) -> Int? {
         for index in 0..<self.count {
             if self[index].id == element.id {
                 return index
@@ -16,5 +16,4 @@ extension Array where Element: Identifiable {
         }
         return nil
     }
-
 }

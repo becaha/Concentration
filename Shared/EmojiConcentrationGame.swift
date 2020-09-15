@@ -29,4 +29,8 @@ class EmojiConcentrationGame: ObservableObject {
     func choose(_ card: ConcentrationGame<String>.Card) {
         game.choose(card)
     }
+    
+    func newGame() {
+        game = EmojiConcentrationGame.createGame()
+    }
 }

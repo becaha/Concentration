@@ -9,35 +9,37 @@ import SwiftUI
 
 struct CardView: View {
     var card: ConcentrationGame<String>.Card
-    var cardCount: Int
     
     var body: some View {
-        ZStack {
-            if card.isFaceUp {
-                RoundedRectangle(cornerRadius: cardCornerRadius).fill(Color.white)
-                RoundedRectangle(cornerRadius: cardCornerRadius).stroke()
-                if cardCount < 10 {
+        GeometryReader { geometry in
+            ZStack {
+                if card.isFaceUp {
+                    RoundedRectangle(cornerRadius: cardCornerRadius).fill(Color.white)
+                    RoundedRectangle(cornerRadius: cardCornerRadius).stroke()
                     Text(card.content)
-                        .font(.largeTitle)
+                        .font(systemFont(for: geometry.size))
                 }
-                else{
-                    Text(card.content)
-                        .font(.body)
+                else {
+                    RoundedRectangle(cornerRadius: 10).fill()
                 }
-            }
-            else {
-                RoundedRectangle(cornerRadius: 10).fill()
             }
         }
+        .aspectRatio(2/3, contentMode: .fit)
     }
     
+    private func systemFont(for size: CGSize) -> Font {
+        return Font.system(size: min(size.width, size.height) * fontScaleFactor)
+    }
+        
     // MARK: - Drawing constants
     
     private let cardCornerRadius: CGFloat = 10.0
+    private let fontScaleFactor: CGFloat = 0.50
 }
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(card: ConcentrationGame<String>.Card(content: "🥨", id: 1), cardCount: 1)
+        CardView(card: ConcentrationGame<String>.Card(content: "🥨", id: 1))
+            .padding(50)
     }
 }
