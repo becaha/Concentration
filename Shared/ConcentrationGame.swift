@@ -15,12 +15,13 @@ struct ConcentrationGame<CardContent: Equatable> {
         
         var isFaceUp = false
         var isMatched = false
+        var timesSeen = 0
         var content: CardContent
         var id: Int
     }
     
     var cards: Array<Card>
-    var score: Int
+    var score: Int 
     var indexOfFaceUpCard: Int?
     
     init(cardContentFactory: (Int) -> CardContent) {
@@ -45,9 +46,19 @@ struct ConcentrationGame<CardContent: Equatable> {
            !cards[chosenIndex].isFaceUp, !cards[chosenIndex].isMatched
            {
             if let potentialMatchIndex = indexOfFaceUpCard {
+                // found a match
                 if cards[chosenIndex] == cards[potentialMatchIndex] {
                     cards[chosenIndex].isMatched = true
                     cards[potentialMatchIndex].isMatched = true
+                    score += 2
+                }
+                else {
+                    if cards[chosenIndex].timesSeen > 0 {
+                        score -= 1
+                    }
+                    if cards[potentialMatchIndex].timesSeen > 1 {
+                        score -= 1
+                    }
                 }
                 indexOfFaceUpCard = nil
             } else {
@@ -56,6 +67,7 @@ struct ConcentrationGame<CardContent: Equatable> {
                 }
                 indexOfFaceUpCard = chosenIndex
             }
+            cards[chosenIndex].timesSeen += 1
             cards[chosenIndex].isFaceUp.toggle()
         }
     }

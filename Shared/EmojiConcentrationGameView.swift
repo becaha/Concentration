@@ -13,7 +13,11 @@ struct EmojiConcentrationGameView: View {
     var body: some View {
         VStack {
             HStack {
-//                TextField("", text: $emojiGame.score)
+                Text("Score: \(emojiGame.score)")
+                    .padding(8)
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
 
                 Spacer()
 

@@ -24,6 +24,10 @@ class EmojiConcentrationGame: ObservableObject {
         game.cards
     }
     
+    var score: String {
+        game.score.toString()
+    }
+    
     // MARK: - Intents
     
     func choose(_ card: ConcentrationGame<String>.Card) {
