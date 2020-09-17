@@ -16,11 +16,14 @@ struct CardView: View {
                 if card.isFaceUp {
                     RoundedRectangle(cornerRadius: cardCornerRadius).fill(Color.white)
                     RoundedRectangle(cornerRadius: cardCornerRadius).stroke()
+                    Pie(startAngle: Angle.degrees(0-90), endAngle: Angle.degrees(360-90))
+                        .padding()
+                        .opacity(0.4)
                     Text(card.content)
                         .font(systemFont(for: geometry.size))
                 }
                 else if !card.isMatched {
-                    RoundedRectangle(cornerRadius: 10).fill()
+                    RoundedRectangle(cornerRadius: cardCornerRadius).fill()
                 }
             }
         }
@@ -39,7 +42,7 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(card: ConcentrationGame<String>.Card(content: "🥨", id: 1))
+        CardView(card: ConcentrationGame<String>.Card(isFaceUp: true, content: "🥨", id: 1))
             .padding(50)
     }
 }

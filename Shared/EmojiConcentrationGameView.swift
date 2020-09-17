@@ -21,9 +21,7 @@ struct EmojiConcentrationGameView: View {
 
                 Spacer()
 
-                Button(action: {
-                    emojiGame.newGame()
-                }) {
+                Button(action: emojiGame.newGame) {
                     Text("New Game")
                         .padding(8)
                         .background(Color.blue)
@@ -36,7 +34,8 @@ struct EmojiConcentrationGameView: View {
                 LazyVGrid(columns: columns(for: geometry.size)) {
                     ForEach(emojiGame.cards) { card in
                         CardView(card: card)
-                            .onTapGesture {
+                            .onTapGesture
+                            {
                                 emojiGame.choose(card)
                             }
                     }

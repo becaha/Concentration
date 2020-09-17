@@ -8,21 +8,11 @@
 import Foundation
 
 struct ConcentrationGame<CardContent: Equatable> {
-    struct Card: Identifiable {
-        static func == (lhs: ConcentrationGame<CardContent>.Card, rhs: ConcentrationGame<CardContent>.Card) -> Bool {
-            return lhs.content == rhs.content
-        }
-        
-        var isFaceUp = false
-        var isMatched = false
-        var timesSeen = 0
-        var content: CardContent
-        var id: Int
-    }
-    
-    var cards: Array<Card>
+    private(set) var cards: Array<Card>
     var score: Int 
-    var indexOfFaceUpCard: Int?
+    private var indexOfFaceUpCard: Int?
+//    private var indexOfFaceUpCard {
+//    get set
     
     init(cardContentFactory: (Int) -> CardContent) {
         
@@ -39,6 +29,18 @@ struct ConcentrationGame<CardContent: Equatable> {
         }
         
         cards.shuffle()
+    }
+    
+    struct Card: Identifiable {
+        static func == (lhs: ConcentrationGame<CardContent>.Card, rhs: ConcentrationGame<CardContent>.Card) -> Bool {
+            return lhs.content == rhs.content
+        }
+        
+        fileprivate(set) var isFaceUp = false
+        fileprivate(set) var isMatched = false
+        fileprivate(set) var timesSeen = 0
+        fileprivate(set) var content: CardContent
+        fileprivate(set) var id: Int
     }
     
     mutating func choose(_ card: Card) {

@@ -25,6 +25,8 @@
 		DB02F3CF250A79AE006A7129 /* Array+Index.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB02F3CD250A79AE006A7129 /* Array+Index.swift */; };
 		DBEDE01D25119A0D0051093F /* Int+toString.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEDE01C25119A0D0051093F /* Int+toString.swift */; };
 		DBEDE01E25119A0D0051093F /* Int+toString.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEDE01C25119A0D0051093F /* Int+toString.swift */; };
+		DBEDE02F2513B1AE0051093F /* Pie.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEDE02E2513B1AE0051093F /* Pie.swift */; };
+		DBEDE0302513B1AE0051093F /* Pie.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEDE02E2513B1AE0051093F /* Pie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,7 @@
 		DB02F3C7250A6F6C006A7129 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		DB02F3CD250A79AE006A7129 /* Array+Index.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Index.swift"; sourceTree = "<group>"; };
 		DBEDE01C25119A0D0051093F /* Int+toString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+toString.swift"; sourceTree = "<group>"; };
+		DBEDE02E2513B1AE0051093F /* Pie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +202,7 @@
 			children = (
 				DB02F37A2507F5E2006A7129 /* EmojiConcentrationGameView.swift */,
 				DB02F3C7250A6F6C006A7129 /* CardView.swift */,
+				DBEDE02E2513B1AE0051093F /* Pie.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -362,6 +366,7 @@
 			files = (
 				DB02F3BA2507F9D0006A7129 /* EmojiConcentrationGame.swift in Sources */,
 				DB02F3B72507F95E006A7129 /* ConcentrationGame.swift in Sources */,
+				DBEDE02F2513B1AE0051093F /* Pie.swift in Sources */,
 				DB02F3A42507F5E3006A7129 /* EmojiConcentrationGameView.swift in Sources */,
 				DBEDE01D25119A0D0051093F /* Int+toString.swift in Sources */,
 				DB02F3A22507F5E3006A7129 /* HW_3App.swift in Sources */,
@@ -376,6 +381,7 @@
 			files = (
 				DB02F3BB2507F9D0006A7129 /* EmojiConcentrationGame.swift in Sources */,
 				DB02F3B82507F95E006A7129 /* ConcentrationGame.swift in Sources */,
+				DBEDE0302513B1AE0051093F /* Pie.swift in Sources */,
 				DB02F3A52507F5E3006A7129 /* EmojiConcentrationGameView.swift in Sources */,
 				DBEDE01E25119A0D0051093F /* Int+toString.swift in Sources */,
 				DB02F3A32507F5E3006A7129 /* HW_3App.swift in Sources */,
