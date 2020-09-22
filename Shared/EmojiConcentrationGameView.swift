@@ -21,7 +21,10 @@ struct EmojiConcentrationGameView: View {
 
                 Spacer()
 
-                Button(action: emojiGame.newGame) {
+                Button(action: 
+                    withAnimation(.easeInOut) {
+                        emojiGame.newGame
+                    }) {
                     Text("New Game")
                         .padding(8)
                         .background(Color.blue)
@@ -36,7 +39,9 @@ struct EmojiConcentrationGameView: View {
                         CardView(card: card)
                             .onTapGesture
                             {
-                                emojiGame.choose(card)
+                                withAnimation(.linear(duration: 0.5)) {
+                                    emojiGame.choose(card)
+                                }
                             }
                     }
                 }

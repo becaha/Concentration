@@ -12,19 +12,18 @@ struct CardView: View {
     
     var body: some View {
         GeometryReader { geometry in
-            ZStack {
-                if card.isFaceUp {
-                    RoundedRectangle(cornerRadius: cardCornerRadius).fill(Color.white)
-                    RoundedRectangle(cornerRadius: cardCornerRadius).stroke()
+            if card.isFaceUp || !card.isMatched {
+                ZStack {
                     Pie(startAngle: Angle.degrees(0-90), endAngle: Angle.degrees(360-90))
                         .padding()
                         .opacity(0.4)
                     Text(card.content)
                         .font(systemFont(for: geometry.size))
+                        .rotationEffect(Angle.degrees(card.isMatched ? 360 : 0))
+                        .animation(card.isMatched ? Animation.linear(duration: 1)
+                                    .repeatForever(autoreverses: false) : .default)
                 }
-                else if !card.isMatched {
-                    RoundedRectangle(cornerRadius: cardCornerRadius).fill()
-                }
+                .modifier(Cardify(isFaceUp: card.isFaceUp))
             }
         }
         .aspectRatio(2/3, contentMode: .fit)

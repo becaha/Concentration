@@ -10,9 +10,18 @@ import Foundation
 struct ConcentrationGame<CardContent: Equatable> {
     private(set) var cards: Array<Card>
     var score: Int 
-    private var indexOfFaceUpCard: Int?
-//    private var indexOfFaceUpCard {
-//    get set
+    private var indexOfFaceUpCard: Int? {
+        get {
+            cards.indices.filter{
+                cards[$0].isFaceUp
+            }.only
+        }
+        set {
+            for index in cards.indices {
+                cards[index].isFaceUp = index == newValue
+            }
+        }
+    }
     
     init(cardContentFactory: (Int) -> CardContent) {
         
@@ -49,7 +58,7 @@ struct ConcentrationGame<CardContent: Equatable> {
            {
             if let potentialMatchIndex = indexOfFaceUpCard {
                 // found a match
-                if cards[chosenIndex] == cards[potentialMatchIndex] {
+                if cards[chosenIndex].content == cards[potentialMatchIndex].content {
                     cards[chosenIndex].isMatched = true
                     cards[potentialMatchIndex].isMatched = true
                     score += 2
@@ -62,15 +71,36 @@ struct ConcentrationGame<CardContent: Equatable> {
                         score -= 1
                     }
                 }
-                indexOfFaceUpCard = nil
+                cards[chosenIndex].isFaceUp = true
             } else {
-                for index in cards.indices {
-                    cards[index].isFaceUp = false
-                }
                 indexOfFaceUpCard = chosenIndex
             }
             cards[chosenIndex].timesSeen += 1
-            cards[chosenIndex].isFaceUp.toggle()
         }
     }
+    
+    // MARK: - Bonus Time
+    
+//    var bonusTimeLimit: TimeInterval = 10
+//    var lastFaceUpTime: Date?
+//    var pastFaceUpTime: TimeInterval = 0
+//
+//    var bonusTimeRemaining: Double {
+//        max(0, bonusTimeLimit - faceUpTime)
+//    }
+//
+////    var faceUpTime: TimeInterval {
+////        if let lastFaceUpTime = lastFaceUpTime {
+////            return lastFaceUpTime
+////        }
+////    }
+//
+//
+//    func startUsingBonusTime() {
+//
+//    }
+//
+//    func stopUsingBonusTime() {
+//
+//    }
 }
