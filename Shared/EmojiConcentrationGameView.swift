@@ -22,7 +22,7 @@ struct EmojiConcentrationGameView: View {
                 Spacer()
 
                 Button(action: 
-                    withAnimation(.easeInOut) {
+                        withAnimation(.easeInOut) {
                         emojiGame.newGame
                     }) {
                     Text("New Game")

@@ -47,7 +47,13 @@ struct Cardify: AnimatableModifier {
 
 struct Cardify_Previews: PreviewProvider {
     static var previews: some View {
-        Text("🎲").modifier(Cardify(isFaceUp: true))
+        Text("🎲").cardify(isFaceUp: true)
             .padding()
+    }
+}
+
+extension View {
+    func cardify(isFaceUp: Bool) -> some View {
+        modifier(Cardify(isFaceUp: isFaceUp))
     }
 }
