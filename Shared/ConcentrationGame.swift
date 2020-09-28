@@ -41,15 +41,83 @@ struct ConcentrationGame<CardContent: Equatable> {
     }
     
     struct Card: Identifiable {
+        private let matchScore = 5
+        private let maxMatchBonus = 5.0
         static func == (lhs: ConcentrationGame<CardContent>.Card, rhs: ConcentrationGame<CardContent>.Card) -> Bool {
             return lhs.content == rhs.content
         }
         
-        fileprivate(set) var isFaceUp = false
-        fileprivate(set) var isMatched = false
+        fileprivate(set) var isFaceUp = false {
+            didSet {
+                if isFaceUp {
+                    startUsingBonusTime()
+                }
+                else {
+                    stopUsingBonusTime()
+                }
+            }
+        }
+        
+        fileprivate(set) var isMatched = false {
+            didSet {
+                stopUsingBonusTime()
+            }
+        }
         fileprivate(set) var timesSeen = 0
         fileprivate(set) var content: CardContent
         fileprivate(set) var id: Int
+        
+        var score: Int {
+            if isMatched {
+                return matchScore + Int(bonusTimeRemaining * maxMatchBonus)
+            }
+            else {
+                return 0
+            }
+        }
+        
+        // MARK: - Bonus Time
+        
+        var bonusTimeLimit: TimeInterval = 10
+        var lastFaceUpTime: Date?
+        var pastFaceUpTime: TimeInterval = 0
+
+        var bonusTimeRemaining: TimeInterval {
+            max(0, bonusTimeLimit - faceUpTime)
+        }
+
+        var bonusRemaining: Double {
+            (bonusTimeLimit > 0 && bonusTimeRemaining > 0) ? bonusTimeRemaining / bonusTimeLimit : 0
+        }
+        
+        var hasEarnedBonus: Bool {
+            isMatched && bonusTimeRemaining > 0
+        }
+        
+        var isConsumingBonusTime: Bool {
+            isFaceUp && !isMatched && bonusTimeRemaining > 0
+        }
+        
+        private var faceUpTime: TimeInterval {
+            if let lastFaceUpTime = lastFaceUpTime {
+                return pastFaceUpTime + Date().timeIntervalSince(lastFaceUpTime)
+            }
+            else {
+                return pastFaceUpTime
+            }
+        }
+
+
+        private mutating func startUsingBonusTime() {
+            if isConsumingBonusTime && lastFaceUpTime == nil {
+                lastFaceUpTime = Date()
+            }
+        }
+
+        private mutating func stopUsingBonusTime() {
+            pastFaceUpTime = faceUpTime
+            lastFaceUpTime = nil
+        }
     }
     
     mutating func choose(_ card: Card) {
@@ -78,29 +146,4 @@ struct ConcentrationGame<CardContent: Equatable> {
             cards[chosenIndex].timesSeen += 1
         }
     }
-    
-    // MARK: - Bonus Time
-    
-//    var bonusTimeLimit: TimeInterval = 10
-//    var lastFaceUpTime: Date?
-//    var pastFaceUpTime: TimeInterval = 0
-//
-//    var bonusTimeRemaining: Double {
-//        max(0, bonusTimeLimit - faceUpTime)
-//    }
-//
-////    var faceUpTime: TimeInterval {
-////        if let lastFaceUpTime = lastFaceUpTime {
-////            return lastFaceUpTime
-////        }
-////    }
-//
-//
-//    func startUsingBonusTime() {
-//
-//    }
-//
-//    func stopUsingBonusTime() {
-//
-//    }
 }

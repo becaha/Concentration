@@ -14,7 +14,7 @@ struct CardView: View {
         GeometryReader { geometry in
             if card.isFaceUp || !card.isMatched {
                 ZStack {
-                    Pie(startAngle: Angle.degrees(0-90), endAngle: Angle.degrees(360-90))
+                    Pie(startAngle: Angle.degrees(0-90), endAngle: Angle.degrees(-card.bonusRemaining*360-90))
                         .padding()
                         .opacity(0.4)
                     Text(card.content)
