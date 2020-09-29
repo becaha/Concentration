@@ -78,7 +78,7 @@ struct ConcentrationGame<CardContent: Equatable> {
         
         // MARK: - Bonus Time
         
-        var bonusTimeLimit: TimeInterval = 10
+        var bonusTimeLimit: TimeInterval = 12
         var lastFaceUpTime: Date?
         var pastFaceUpTime: TimeInterval = 0
 
